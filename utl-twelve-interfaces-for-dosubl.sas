@@ -27,7 +27,11 @@ Here are possible interfaces
      9. Dosubl(""   (quote doubling when ypu have single quotes in your code)                                                   
     10. Dosubl( hiding quotes using "27"x, and "22"x for single and double quotes)                                              
     11. Passing a macro  rc=dosubl('%isperfectsquare(&num);');                                                                  
-    12. Share within a datastep(sort of) processes in involving inputs and outputs;                                             
+    12. Share within a datastep(sort of) processes in involving inputs and outputs;      
+    13. Using dosubl within a macro smf share enviroment variable with mainline(parent)                                          
+        https://tinyurl.com/37wfav9p                                                                                              
+        https://github.com/rogerjdeangelis/utl-embedding-dosubl-in-a-macro-and-returning-an-updated-environment-variable-contents 
+
                                                                                                                                 
         Rrocess Timing                                                                                                          
                                                                                                                                 
