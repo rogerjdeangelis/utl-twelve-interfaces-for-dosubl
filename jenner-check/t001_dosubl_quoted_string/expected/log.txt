@@ -1,0 +1,28 @@
+NOTE: DATA x
+
+1
+
+NOTE: Wrote x (1 rows, 1 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: Option OBS changed to 100.
+NOTE: DATA _null_
+
+NOTE: DOSUBL return code rc=0
+
+NOTE: Read 1 rows from sashelp.class.
+NOTE: Wrote _null_ (1 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA out
+
+
+NOTE: Wrote out (1 rows, 2 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC PRINT data=out
+
+NOTE: PROC PRINT completed: 1 observations printed, 2 variables

@@ -1,0 +1,4 @@
+                           DOSUBL('...') interface: value round-tripped through the sub-step
+
+dosubl_test  dosubl_rc
+1                    0
