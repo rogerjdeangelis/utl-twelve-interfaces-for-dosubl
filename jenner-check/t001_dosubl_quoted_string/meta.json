@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_dosubl_quoted_string",
+  "source_file": "utl-twelve-interfaces-for-dosubl.sas",
+  "source_blob_sha": "ab846a230dd45c63bb0f3265f5ed660ed6b29490",
+  "source_commit": "b2fe2e255520fdd616ff5b1edce8d10e0b5b4588",
+  "notes": "Interface #6 (DOSUBL('...') - author's 'prefered' interface): a macro variable is resolved into a quoted string passed to DOSUBL(), which compiles and runs an independent DATA step at datastep execution time. Only edit: added CALL SYMPUTX to round-trip the sub-step's value back out, and a PROC PRINT so the result is visible in the listing rather than only PUTLOG'd to the log. Runs unmodified logic against sashelp.class (already in the original script, no external data needed)."
+}

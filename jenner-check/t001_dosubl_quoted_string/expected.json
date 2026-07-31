@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-31T01:20:00Z",
+  "_captured_run_id": "r_493fa4b4186b4b18b1e82ee2e9abb7df",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: DATA x",
+    "NOTE: DOSUBL return code rc=0",
+    "NOTE: Wrote out (1 rows, 2 columns).",
+    "NOTE: PROC PRINT completed: 1 observations printed, 2 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
