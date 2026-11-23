@@ -1,5 +1,42 @@
-Twelve interfaces for dosubl                                                                                                    
-                                                                                                                                
+Twelve interfaces for dosubl     
+
+MAJOR ENHANCEMENT
+
+I wish I had discovered this 10 years ago.
+I struggled with quotes within quotes using macro time dosubl;
+
+NOTE QUOTING THE SEMI_COLON
+
+%let rc=%sysfunc(dosubl(
+       data tst %str(;)
+          s="roger '&sysdate' both quotes" %str(;)
+          put s=%str(;)
+        run%str(;)
+        ));
+
+s=roger '23NOV26' both quotes
+
+%macro dosubl(arg);
+  %local rc;
+  %if 0 =  %qsysfunc(dosubl(&arg)) %then %put Completed;
+%mend dosubl;
+
+or
+
+%let rc=%dosubl(
+       data tst %str(;)
+          s="roger '&sysdate' both quotes" %str(;)
+          put s=%str(;)
+        run%str(;)
+        );
+
+s=roger '23NOV26' both quotes
+
+NOTE: The data set WORK.TST has 1 observation and 1 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.02 seconds
+Completed                                                                                                                                
 github                                                                                                                          
 https://github.com/rogerjdeangelis/utl-twelve-interfaces-for-dosubl                                                             
                                                                                                                                 
@@ -17,7 +54,7 @@ within a datastep. I just felt this was the correct syntax? Indirect documentati
 Here are possible interfaces                                                                                                    
                                                                                                                                 
      1. DOSUBL(%nrstr( (good in open code)                                                                                      
-     2. macro variables (with and without symgetn or syget)                                                                     
+     2. Macro variables (with and without symgetn or syget)                                                                     
      3. Shared storage with '%common' macro                                                                                     
      4. Call Execute like string concatination  dosubl('data x;'!!age!!'=2;'!!'run;)                                            
      5. Dosubl(%tslit( (heps with quote doubling)  (better cal execute)                                                         
