@@ -1,6 +1,46 @@
 # utl-twelve-interfaces-for-dosubl
 Twelve interfaces for dosubl
 
+MAJOR ENHANCEMENT
+
+I wish I had discovered this 10 years ago.
+I struggled with quotes within quotes using macro time dosubl;
+
+NOTE QUOTING THE SEMI_COLON
+
+%let rc=%sysfunc(dosubl(
+       data tst %str(;)
+          s="roger '&sysdate' both quotes" %str(;)
+          put s=%str(;)
+        run%str(;)
+        ));
+
+s=roger '23NOV26' both quotes
+
+%macro dosubl(arg);
+  %local rc;
+  %if 0 =  %qsysfunc(dosubl(&arg)) %then %put Completed;
+%mend dosubl;
+
+or
+
+%let rc=%dosubl(
+       data tst %str(;)
+          s="roger '&sysdate' both quotes" %str(;)
+          put s=%str(;)
+        run%str(;)
+        );
+
+s=roger '23NOV26' both quotes
+
+NOTE: The data set WORK.TST has 1 observation and 1 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.02 seconds
+Completed
+
+  
+
     Twelve interfaces for dosubl                                                                                                
                                                                                                                                 
     github                                                                                                                      
